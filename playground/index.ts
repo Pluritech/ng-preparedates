@@ -5,8 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { PrepareDateModule } from './../src/index';
 
-import { SampleModule }  from 'ng-preparedate';
 
 @Component({
   selector: 'app',
@@ -17,7 +17,7 @@ class AppComponent {}
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [ AppComponent ],
-  imports: [ BrowserModule, SampleModule ]
+  imports: [ BrowserModule, PrepareDateModule ]
 })
 class AppModule {}
 
