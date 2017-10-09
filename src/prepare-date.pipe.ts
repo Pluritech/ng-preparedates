@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'prepareDate',
 })
 export class PrepareDatePipe implements PipeTransform {
-  transform(value: string, ...args) {
+  transform(value: string) {
     if (!value) {
       return value;
     };
@@ -13,6 +13,6 @@ export class PrepareDatePipe implements PipeTransform {
       return new Date(value.replace(/-/g, '/'));
     }
 
-    return parseFloat(value) * 1000;
+    return Number.parseFloat(value) * 1000;
   }
 }

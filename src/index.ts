@@ -15,10 +15,10 @@ import { PrepareDatePipe } from './prepare-date.pipe';
   ]
 })
 export class PrepareDateModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot() {
     return {
       ngModule: PrepareDateModule,
-      providers: [PrepareDatePipe]
+      providers: [],
     };
   }
 }
