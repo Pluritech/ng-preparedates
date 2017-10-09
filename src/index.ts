@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { PrepareDatePipe } from './prepare-date.pipe';
 
+export * from './prepare-date.pipe';
+
 @NgModule({
   imports: [
     CommonModule
