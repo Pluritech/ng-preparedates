@@ -22,7 +22,7 @@
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
     "flatModuleOutFile": "ng-preparedate.js",
-    "flatModuleId": "ng-preparedate"
+    "flatModuleId": "@pluritech/ng-preparedate"
   },
   "files": [
     "./index.ts"
