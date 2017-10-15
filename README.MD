@@ -1,11 +1,13 @@
 # ng-preparedate
 
+This pipe is used to normalizes all the dates passed by our PHP servers. Sometimes, the server sends us a date with '-' (dashes) and the ios browsers don't process this kind of datestring, then we have to replace all dashes to slashes.Otherwise, the PHP servers sends us a timestamp in seconds and we have to convert it to milliseconds to Javascript process the date.
+
 ## Installation
 
 To install this library, run:
 
 ```bash
-$ npm install ng-preparedate --save
+$ npm install @pluritech/ng-preparedate --save
 ```
 
 ## Consuming your library
@@ -13,7 +15,7 @@ $ npm install ng-preparedate --save
 Once you have published your library to npm, you can import your library in any Angular application by running:
 
 ```bash
-$ npm install ng-preparedate
+$ npm install @pluritech/ng-preparedate
 ```
 
 and then from your Angular `AppModule`:
@@ -25,7 +27,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { SampleModule } from 'ng-preparedate';
+import { PrepareDateModule } from '@pluritech/ng-preparedate';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,7 @@ import { SampleModule } from 'ng-preparedate';
     BrowserModule,
 
     // Specify your library as an import
-    LibraryModule
+    PrepareDateModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -47,10 +49,9 @@ Once your library is imported, you can use its components, directives and pipes 
 
 ```xml
 <!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
+<div>
+  {{ myDate | prepareDate }}
+</div>
 ```
 
 ## Development
